@@ -43,6 +43,9 @@ const Navber = () => {
                             <li>
                                 <Link href="/books">Books</Link>
                             </li>
+                            <li>
+                                <Link href="/listed-books">Listed Books</Link>
+                            </li>
                             <li><a>About</a></li>
                             <li><a>Contact</a></li>
                         </ul>
@@ -73,9 +76,13 @@ const Navber = () => {
                         <li>
                             <Link href="/books">Books</Link>
                         </li>
-
-                        <li><a>About</a></li>
-                        <li><a>Contact</a></li>
+                        <li>
+                            <Link href="/listed-books">Listed Books</Link>
+                        </li>
+                        <li>
+                            <Link href="/read-books">Read Books</Link>
+                        </li>
+                        
                     </ul>
                 </div>
 
