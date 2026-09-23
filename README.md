@@ -1,36 +1,198 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 BookVibes
 
-## Getting Started
+A modern book management and discovery web application built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**.
 
-First, run the development server:
+Users can explore books, view detailed information, mark books as read, add books to their wishlist, and view their reading list with a chart.
+
+## 🚀 Live Demo
+
+Coming soon...
+
+## ✨ Features
+
+* 📚 Browse all available books
+* 🔍 View individual book details
+* 📖 Add books to the Read Books list
+* ❤️ Add books to the Wishlist
+* 📊 Visualize read books with a bar chart
+* ⭐ Display book ratings
+* 🏷️ Display book categories and tags
+* 📱 Responsive design for mobile, tablet, and desktop
+* 🎨 Modern UI with Tailwind CSS and daisyUI
+* ⚡ Built with Next.js App Router
+
+## 🛠️ Technologies Used
+
+* **Next.js**
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **daisyUI**
+* **Recharts**
+* **Next Image**
+* **Context API**
+* **JSON**
+
+## 📂 Project Structure
+
+```text
+src
+├── app
+│   ├── books
+│   │   ├── page.tsx
+│   │   └── [id]
+│   │       └── page.tsx
+│   ├── listed-books
+│   │   └── page.tsx
+│   └── ...
+│
+├── components
+│   ├── BookDetails
+│   ├── shared
+│   │   ├── BookCard
+│   │   ├── ListedBooksCard
+│   │   └── Footer
+│   └── ...
+│
+├── context
+│   └── BooksContext
+│
+└── types
+    └── book.type
+
+public
+└── booksData.json
+```
+
+## 📖 Main Pages
+
+### Home
+
+Displays featured books and the main website interface.
+
+### All Books
+
+```text
+/books
+```
+
+Displays all books from the book data.
+
+### Book Details
+
+```text
+/books/[id]
+```
+
+Displays detailed information about a selected book.
+
+### Listed Books
+
+```text
+/listed-books
+```
+
+Displays books added to the Read Books list and Wishlist.
+
+## 📊 Reading Chart
+
+The project uses **Recharts** to display read books visually using a bar chart.
+
+The chart is connected to the `BooksContext`, so the displayed data comes from the books selected by the user.
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/NusrathChowdhury/nextjs_DatacCahing_m35.git
+```
+
+Go to the project folder:
+
+```bash
+cd nextjs_DatacCahing_m35
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+## ▶️ Run Locally
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏗️ Build for Production
 
-## Learn More
+To create a production build:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the production version:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+## 📚 Book Data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Book information is stored in:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+public/booksData.json
+```
+
+Each book contains information such as:
+
+* Book ID
+* Book name
+* Author
+* Image
+* Review
+* Total pages
+* Rating
+* Category
+* Tags
+* Publisher
+* Year of publishing
+
+## 🎯 Purpose
+
+This project was created as a practical Next.js project to learn and implement:
+
+* Next.js App Router
+* Dynamic routes
+* Server and client components
+* Data fetching
+* React Context API
+* State management
+* Responsive UI
+* Data visualization
+* Modern frontend development
+
+## 👩‍💻 Author
+
+**Nusrath Chowdhury**
+
+BSc in Computer Science & Engineering
+
+GitHub:
+https://github.com/NusrathChowdhury
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository.
