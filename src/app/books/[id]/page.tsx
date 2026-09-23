@@ -9,20 +9,21 @@ interface BookDetailPageProps {
     }>;
 }
 
-
 const getBooks = async () => {
-    try{
+    const res = await fetch(
+        'https://books-vibe-nextjs-m36.vercel.app/booksData.json'
+    );
 
-      const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`
-);
-        const data = await res.json();
-        return data;
-    }catch(error){
-        console.error('Error Fetching Data',error)
-        return []
+    if (!res.ok) {
+        throw new Error(`Failed to fetch books: ${res.status}`);
     }
+
+    const data = await res.json();
+
+    return data;
 };
+
+
 
 const BookDetailPage = async ({ params }: BookDetailPageProps) => {
     const { id } = await params;

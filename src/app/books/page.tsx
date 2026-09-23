@@ -1,19 +1,18 @@
 import BookCard from '@/components/shared/BookCard';
 import { IBook } from '@/types/book.type';
 
-
 const getBooks = async () => {
-    try {
+    const res = await fetch(
+        'https://books-vibe-nextjs-m36.vercel.app/booksData.json'
+    );
 
-       const res = await fetch(
-    `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/booksData.json`
-);
-        const data = await res.json();
-        return data;
-    } catch (error) {
-        console.error('Error Fetching Data', error)
-        return []
+    if (!res.ok) {
+        throw new Error(`Failed to fetch books: ${res.status}`);
     }
+
+    const data = await res.json();
+
+    return data;
 };
 
 const BooksPage = async () => {
@@ -21,7 +20,6 @@ const BooksPage = async () => {
 
     return (
         <div className="max-w-6xl mx-auto py-10">
-
             <h1 className="text-4xl font-bold text-center mb-10">
                 All Books
             </h1>
@@ -34,7 +32,6 @@ const BooksPage = async () => {
                     />
                 ))}
             </div>
-
         </div>
     );
 };
