@@ -6,7 +6,7 @@ Users can explore books, view detailed information, mark books as read, add book
 
 ## 🚀 Live Demo
 
-Coming soon...
+[Coming soon...](https://books-vibe-nextjs-m36.vercel.app/)
 
 ## ✨ Features
 
